@@ -1,6 +1,0 @@
-<Doctype HTML>
-<html lang="en">
-<head>
-<title> Webpage Title </title>
-<h1> 
-

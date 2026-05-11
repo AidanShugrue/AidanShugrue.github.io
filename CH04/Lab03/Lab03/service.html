@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service & Volunteering - CCSU</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .club-list { margin-top: 40px; }
+        .club-item {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 5px solid #e67e22; /* Service Orange accent */
+            transition: transform 0.2s;
+        }
+        .club-item:hover { transform: scale(1.01); }
+        
+        .club-info h3 { color: var(--ccsu-blue); margin-bottom: 5px; }
+        .stats { font-size: 0.85rem; color: #666; margin-bottom: 10px; }
+        
+        .join-btn {
+            background: #e67e22;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .join-btn:hover { background: #d35400; }
+        
+        .back-link { display: inline-block; margin-bottom: 20px; color: var(--ccsu-blue); text-decoration: none; font-weight: bold; }
+        
+        .rec-info { 
+            background: #eef7ff; 
+            padding: 20px; 
+            border-radius: 8px; 
+            margin-bottom: 30px; 
+            border: 1px solid #d1e9ff;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo">CCSU <span>Student Life</span></div>
+        </nav>
+    </header>
+
+    <div class="container" style="padding-top: 40px;">
+        <a href="index.html" class="back-link">← Back to All Categories</a>
+        <h1>Service & Volunteering</h1>
+        <p>Give back to the community, build your resume, and make a lasting difference with fellow students.</p>
+
+        <div class="rec-info">
+            <div style="font-size: 2rem;">🤝</div>
+            <div>
+                <strong>Office of Community Engagement:</strong> Visit us in the Student Center, Room 101 for official volunteer logging and transit to service sites.
+            </div>
+        </div>
+
+        <div class="club-list">
+            <!-- Club 1 -->
+            <div class="club-item">
+                <div class="club-info">
+                    <h3>Habitat for Humanity</h3>
+                    <div class="stats"><strong>Focus:</strong> Housing | <strong>Meeting:</strong> Monthly (Student Center)</div>
+                    <p>Help build safe, affordable housing in the New Britain area. Join our Saturday "Build Days" to learn hands-on construction skills!</p>
+                </div>
+                <button class="join-btn" onclick="joinService('Habitat for Humanity')">Get Involved</button>
+            </div>
+
+            <!-- Club 2 -->
+            <div class="club-item">
+                <div class="club-info">
+                    <h3>CCSU Red Cross Club</h3>
+                    <div class="stats"><strong>Focus:</strong> Health & Safety | <strong>Next Event:</strong> Blood Drive (Sept 15)</div>
+                    <p>Coordinate life-saving blood drives and complete certification courses in First Aid and CPR with our campus chapter.</p>
+                </div>
+                <button class="join-btn" onclick="joinService('Red Cross')">Get Involved</button>
+            </div>
+
+            <!-- Club 3 -->
+            <div class="club-item">
+                <div class="club-info">
+                    <h3>Sustainable Central</h3>
+                    <div class="stats"><strong>Focus:</strong> Environment | <strong>Practice:</strong> Weekly Campus Cleanup</div>
+                    <p>Dedicated to making Central a greener campus through recycling initiatives, gardening, and environmental advocacy.</p>
+                </div>
+                <button class="join-btn" onclick="joinService('Sustainable Central')">Get Involved</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Central Connecticut State University | 1615 Stanley Street, New Britain, CT</p>
+        </div>
+    </footer>
+
+    <script>
+        function joinService(clubName) {
+            alert("Thank you! Your interest in " + clubName + " has been sent. Check your CCSU email for the next orientation date!");
+        }
+    </script>
+</body>
+</html>

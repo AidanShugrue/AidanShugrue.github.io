@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic & Professional Organizations - CCSU</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .club-list { margin-top: 40px; }
+
+        .club-item {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 5px solid #003366; /* Academic Accent */
+            transition: transform 0.2s;
+        }
+
+        .club-item:hover { transform: scale(1.01); }
+
+        .club-info h3 { color: var(--ccsu-blue); margin-bottom: 5px; }
+        .stats { font-size: 0.85rem; color: #666; margin-bottom: 10px; }
+
+        .join-btn {
+            background: #003366;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .join-btn:hover { background: #001f40; }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--ccsu-blue);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .rec-info {
+            background: #eef7ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border: 1px solid #d1e9ff;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav class="container">
+        <div class="logo">CCSU <span>Student Life</span></div>
+    </nav>
+</header>
+
+<div class="container" style="padding-top: 40px;">
+
+    <a href="index.html" class="back-link">← Back to All Categories</a>
+
+    <h1>Academic & Professional Organizations</h1>
+    <p>Boost your resume, gain leadership experience, and connect with peers in your field of study.</p>
+
+    <div class="rec-info">
+        <div style="font-size: 2rem;">📘</div>
+        <div>
+            <strong>Career Development Office:</strong> Visit Willard-DiLoreto for internship advising, résumé reviews, and professional workshops.
+        </div>
+    </div>
+
+    <div class="club-list">
+
+        <div class="club-item">
+            <div class="club-info">
+                <h3>Computer Science Club</h3>
+                <div class="stats"><strong>Members:</strong> 45 | <strong>Meeting:</strong> Thursdays @ 3pm</div>
+                <p>Focuses on coding competitions, hackathons, and software development workshops.</p>
+            </div>
+            <button class="join-btn" onclick="joinClub('Computer Science Club')">Join Club</button>
+        </div>
+
+        <div class="club-item">
+            <div class="club-info">
+                <h3>Accounting Society</h3>
+                <div class="stats"><strong>Members:</strong> 30 | <strong>Meeting:</strong> Tuesdays @ 5pm</div>
+                <p>Networking opportunities with Big Four firms and CPA exam preparation support.</p>
+            </div>
+            <button class="join-btn" onclick="joinClub('Accounting Society')">Join Club</button>
+        </div>
+
+        <div class="club-item">
+            <div class="club-info">
+                <h3>Pre-Health Society</h3>
+                <div class="stats"><strong>Members:</strong> 62 | <strong>Meeting:</strong> Wednesdays @ 4pm</div>
+                <p>Resources for students pursuing careers in Medicine, Dentistry, or Veterinary sciences.</p>
+            </div>
+            <button class="join-btn" onclick="joinClub('Pre-Health Society')">Join Club</button>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function joinClub(clubName) {
+        alert("Your request to join the " + clubName + " has been sent! Check your CCSU email for confirmation.");
+    }
+</script>
+
+</body>
+</html>

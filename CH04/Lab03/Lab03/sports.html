@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports & Recreation - CCSU</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .club-list { margin-top: 40px; }
+
+        .club-item {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 5px solid #28a745; /* Sports Accent */
+            transition: transform 0.2s;
+        }
+
+        .club-item:hover { transform: scale(1.01); }
+
+        .club-info h3 { color: var(--ccsu-blue); margin-bottom: 5px; }
+        .stats { font-size: 0.85rem; color: #666; margin-bottom: 10px; }
+
+        .join-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .join-btn:hover { background: #218838; }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--ccsu-blue);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .rec-info {
+            background: #f3fff3;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border: 1px solid #d6f5d6;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav class="container">
+        <div class="logo">CCSU <span>Student Life</span></div>
+    </nav>
+</header>
+
+<div class="container" style="padding-top: 40px;">
+
+    <a href="index.html" class="back-link">← Back to All Categories</a>
+
+    <h1>Sports & Recreation</h1>
+    <p>Stay active, compete in club sports, and improve your wellness with fellow Blue Devils.</p>
+
+    <div class="rec-info">
+        <div style="font-size: 2rem;">🏋️‍♂️</div>
+        <div>
+            <strong>C.J. Huang Recreation Center:</strong> Most recreation clubs meet here. Bring your BlueNet ID for entry and equipment checkout.
+        </div>
+    </div>
+
+    <div class="club-list">
+
+        <div class="club-item">
+            <div class="club-info">
+                <h3>Rugby Club (Men's & Women's)</h3>
+                <div class="stats"><strong>Level:</strong> Competitive | <strong>Practice:</strong> Mon/Wed @ 7pm (Arute Field)</div>
+                <p>Compete against universities across New England. No experience necessary — all are welcome to join the ruggers!</p>
+            </div>
+            <button class="join-btn" onclick="joinClub('Rugby Club')">Join Team</button>
+        </div>
+
+        <div class="club-item">
+            <div class="club-info">
+                <h3>CCSU Outdoors Club</h3>
+                <div class="stats"><strong>Level:</strong> Casual | <strong>Next Trip:</strong> Saturday Hiking (Talcott Mountain)</div>
+                <p>Explore Connecticut through hiking, kayaking, camping, and weekend adventure trips.</p>
+            </div>
+            <button class="join-btn" onclick="joinClub('Outdoors Club')">Join Club</button>
+        </div>
+
+        <div class="club-item">
+            <div class="club-info">
+                <h3>Cheerleading & Dance Team</h3>
+                <div class="stats"><strong>Level:</strong> Competitive | <strong>Meeting:</strong> Tues/Thurs @ 6pm</div>
+                <p>Support CCSU athletics and compete in national cheer and dance championships.</p>
+            </div>
+            <button class="join-btn" onclick="joinClub('Cheer & Dance')">Join Team</button>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function joinClub(clubName) {
+        alert("Awesome! The " + clubName + " captain has been notified. Check your CCSU email for waiver forms and practice schedules!");
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Interest Clubs - CCSU</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .club-list { margin-top: 40px; }
+        .club-item {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 5px solid #8e44ad; /* Special Interest Purple */
+            transition: transform 0.2s;
+        }
+        .club-item:hover { transform: scale(1.01); }
+        
+        .club-info h3 { color: var(--ccsu-blue); margin-bottom: 5px; }
+        .stats { font-size: 0.85rem; color: #666; margin-bottom: 10px; }
+        
+        .join-btn {
+            background: #8e44ad;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .join-btn:hover { background: #732d91; }
+        
+        .back-link { display: inline-block; margin-bottom: 20px; color: var(--ccsu-blue); text-decoration: none; font-weight: bold; }
+        
+        .rec-info { 
+            background: #f9f0ff; 
+            padding: 20px; 
+            border-radius: 8px; 
+            margin-bottom: 30px; 
+            border: 1px solid #e9d5ff;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo">CCSU <span>Student Life</span></div>
+        </nav>
+    </header>
+
+    <div class="container" style="padding-top: 40px;">
+        <a href="index.html" class="back-link">← Back to All Categories</a>
+        <h1>Special Interest Clubs</h1>
+        <p>From hobbies to niche passions, find a community that shares your unique interests at Central.</p>
+
+        <div class="rec-info">
+            <div style="font-size: 2rem;">✨</div>
+            <div>
+                <strong>Student Activities Board:</strong> Don't see a club for your hobby? Visit the Student Leadership office to learn how to start your own with just 10 members!
+            </div>
+        </div>
+
+        <div class="club-list">
+            <!-- Club 1 -->
+            <div class="club-item">
+                <div class="club-info">
+                    <h3>Tabletop Gaming Society</h3>
+                    <div class="stats"><strong>Focus:</strong> Strategy & Social | <strong>Meeting:</strong> Fridays @ 5pm (Student Center)</div>
+                    <p>Whether it's Dungeons & Dragons, Settlers of Catan, or Magic: The Gathering, we provide the space and the players for all things tabletop.</p>
+                </div>
+                <button class="join-btn" onclick="joinSpecial('Tabletop Gaming')">Join Club</button>
+            </div>
+
+            <!-- Club 2 -->
+            <div class="club-item">
+                <div class="club-info">
+                    <h3>CCSU Anime Club</h3>
+                    <div class="stats"><strong>Focus:</strong> Media & Culture | <strong>Activity:</strong> Weekly Screenings</div>
+                    <p>Join us for weekly watch parties, discussions on the latest seasonal hits, and our annual trip to Anime Boston!</p>
+                </div>
+                <button class="join-btn" onclick="joinSpecial('Anime Club')">Join Club</button>
+            </div>
+
+            <!-- Club 3 -->
+            <div class="club-item">
+                <div class="club-info">
+                    <h3>Culinary & Baking Club</h3>
+                    <div class="stats"><strong>Focus:</strong> Skill Building | <strong>Location:</strong> Campus Kitchens</div>
+                    <p>Explore the art of cooking! We host workshops, recipe swaps, and friendly bake-off competitions throughout the semester.</p>
+                </div>
+                <button class="join-btn" onclick="joinSpecial('Culinary Club')">Join Club</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Central Connecticut State University | 1615 Stanley Street, New Britain, CT</p>
+        </div>
+    </footer>
+
+    <script>
+        function joinSpecial(clubName) {
+            alert("Awesome! You've expressed interest in the " + clubName + ". Look out for a Discord or GroupMe invite in your student email!");
+        }
+    </script>
+</body>
+</html>
